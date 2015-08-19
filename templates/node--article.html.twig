@@ -17,6 +17,5 @@
 {# Override the content block to hide the field_image subvariable because
    it is being rendered in header_fields. #}
 {% block content %}
-  {% hide(content.field_image) %}
-  {{ content }}
+  {{ content|without('field_image') }}
 {% endblock %}
